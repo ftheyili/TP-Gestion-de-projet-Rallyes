@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2023-05-31" view-index="0" gantt-divider-location="498" resource-divider-location="526" version="3.2.3247" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:0" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="292" order="0"/>
+        <field id="tpd4" name="Date de début" width="94" order="1"/>
+        <field id="tpd5" name="Date de fin" width="111" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="color.recent">
+            <![CDATA[#eeeeee #333333 #009999 #006666 #cc0000 #cc00cc #00ff33 #3333ff #ff3333]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="240" order="0"/>
+        <field id="1" name="Rôle par défaut" width="282" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="3" name="Analyse de la demande/exigence" color="#eeeeee" shape="1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0" meeting="false" start="2023-06-01" duration="5" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="4" name="Création du support" color="#009999" meeting="false" start="2023-06-08" duration="10" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true">
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+            <task id="5" name="Développement du site" color="#8cb6ce" meeting="false" start="2023-06-08" duration="5" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true"/>
+            <task id="7" name="Déploiement et configuration (server)" color="#8cb6ce" meeting="false" start="2023-06-12" duration="5" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true"/>
+            <task id="6" name="Tests et vérifications" color="#8cb6ce" meeting="false" start="2023-06-19" duration="3" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="12" name="Post création" color="#009999" meeting="false" start="2023-06-22" duration="10" complete="0" thirdDate="2023-06-22" thirdDate-constraint="0" expand="true">
+            <task id="10" name="Maintenance" color="#8cb6ce" meeting="false" start="2023-06-22" duration="10" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true"/>
+            <task id="9" name="Communication et transition" color="#8cb6ce" meeting="false" start="2023-06-22" duration="1" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true"/>
+            <task id="11" name="Collecte des feedback" color="#8cb6ce" meeting="false" start="2023-06-22" duration="5" complete="0" thirdDate="2023-05-30" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Chef de projet" function="Default:1" contacts="" phone="">
+            <rate name="standard" value="500"/>
+        </resource>
+        <resource id="1" name="Développeurs logiciels" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="400"/>
+        </resource>
+        <resource id="2" name="Testeurs" function="SoftwareDevelopment:4" contacts="" phone="">
+            <rate name="standard" value="400"/>
+        </resource>
+        <resource id="3" name="Admin système" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="400"/>
+        </resource>
+        <resource id="4" name="Web Designer Junior" function="SoftwareDevelopment:9" contacts="" phone="">
+            <rate name="standard" value="250"/>
+        </resource>
+    </resources>
+    <allocations>
+        <allocation task-id="3" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:1" responsible="false" load="50.0"/>
+        <allocation task-id="11" resource-id="0" function="Default:1" responsible="false" load="10.0"/>
+        <allocation task-id="10" resource-id="0" function="Default:1" responsible="true" load="10.0"/>
+        <allocation task-id="5" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="10" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="30.0"/>
+        <allocation task-id="6" resource-id="2" function="SoftwareDevelopment:4" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="10" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="10.0"/>
+        <allocation task-id="5" resource-id="4" function="SoftwareDevelopment:9" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
